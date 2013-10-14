@@ -7,7 +7,7 @@ This will override system language when user is logged in.
 
 The module will work as a `sub module` to e.g. a profile module. In the default setup
 I use the 'profile' module `account_profile` (were user can write a short bio and enter birthday and a few other things). 
-The account_locale module needs a single ini setting, which will tell which module
+The `account_locales` module needs a single ini setting, which will tell which module
 is the parent module:
 
      account_locales_parent = 'account_profile'
