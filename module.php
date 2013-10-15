@@ -39,7 +39,7 @@ class account_locales {
      */
     public static function editAction () {
         
-        if (!session::isUser()) {
+        if (!session::checkAccess('user')) {
             return;
         }
         
