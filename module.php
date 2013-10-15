@@ -27,7 +27,7 @@ class account_locales {
      */
     public static function getModuleMenuItem ($args) {
         $ary = array(
-            'title' => lang::translate('Set language'),
+            'title' => lang::translate('Edit language'),
             'url' => '/account_locales/edit',
             'auth' => 'user');
         return $ary;
