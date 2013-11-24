@@ -43,11 +43,10 @@ class account_locales {
             return;
         }
         
-        $parent = config::getModuleIni('account_locales_parent');
+        moduleloader::includeModule('locales'); 
         
-        moduleloader::includeModule('locales');         
-        layout::setCurrentModuleMenu('account_locales', $parent);
-        layout::setModuleMenu($parent);
+        $parent = config::getModuleIni('account_locales_parent');        
+        layout::setParentModuleMenu($parent);
         
         if (isset($_POST['language'])) {
             locales::updateAccountLanguage('/account_locales/edit');
@@ -61,3 +60,4 @@ class account_locales {
         locales::displaySetLanguage($default);        
     }
 }
+
